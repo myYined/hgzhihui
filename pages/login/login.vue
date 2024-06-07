@@ -89,11 +89,9 @@
 				iPassword: "",
 				autoLogin: true,
 				form: {},
-				checked:false
+				checked:false,
+				machineType:'',//phone | pad
 			};
-		},
-		onLaunch: () => {
-			plus.screen.lockOrientation('portrait-primary');
 		},
 		onLoad: function(options) {
 			if (options.loginFlag == '1') {
@@ -104,6 +102,12 @@
 				console.log(JSON.stringify(info));
 				this.version = info.version;
 				// this.versionCode = info.versionCode ;
+			})
+			uni.getStorage({
+				key:'deviceType',
+				success: (res) => {
+					console.log(res,'stro');
+				}
 			})
 		},
 		// onShow() {
@@ -245,9 +249,6 @@
 		position: relative;
 		height: 100vh;
 		overflow: auto;
-		// background: url("../../static/image/logo.jpg");
-		// background-repeat: no-repeat;
-		// background-size: 100%;
 		.index_img{
 			position: absolute;
 			z-index: 0;
@@ -257,8 +258,9 @@
 		.group_1{
 			position: relative;
 			.header{
-				height: 90rpx;
+				// height: 90rpx;;
 				.nav{
+					height: 6.5vh;//6.5vh
 					display: flex;
 					justify-content: flex-end;
 					position: relative;
@@ -266,16 +268,19 @@
 					// background-color: rgba(255, 255, 255, .1);
 					// border: 1px solid red;
 					.nav_right{
-						width: 90rpx;
+						width: 6.5vw;
+						// width: 90rpx;
 						display: flex;
 						justify-content: center;
-						align-content: center;
+						align-items: center;
 						$imageSize:35rpx;
+						margin-right: 1.3vw;
 						image{
-							margin-top: 25rpx;
-							display: block;
-							width: $imageSize;
-							height: $imageSize;
+							// margin-top: 25rpx;
+							width: 4.5vw;
+							height: 3vh;
+							// height:$imageSize ;
+							// width: $imageSize;
 						}
 					}
 				}
@@ -296,40 +301,40 @@
 					text-align: center;
 					._form{
 						._input_user,._input_pass{
-							width: 450rpx;
+							width: 60vw;//450rpx
 							overflow: hidden;
-							margin: 35rpx 0;
+							margin: 3vh 0;//35rpx 0
 							.user_pnt,.pass_pnt{
-								border-radius: 5rpx;
-								height: 55rpx;
+								border-radius: 0.5vw;//5rpx
+								height: 5vh;//55rpx
 								display: flex;
 								align-items: center;
 								background-color: rgba(255, 255, 255, .6);
 								
 								.imgview{
-									height: 45rpx;
-									width: 60rpx;
+									height: 4vh;//45rpx
+									width: 8vw;//60
 									display: flex;
 									align-items: center;
 									justify-content: center;
 									image{
-										width: 25rpx;
-										height: 30rpx;
+										width: 3vw;//25
+										height: 2vh;//30
 									}
 								}
 								.vertical{
-									height: 50rpx;
-									width: 3rpx;
+									height: 5vh;//50
+									width: 0.3vw;
 									display: flex;
 									align-items: center;
 									justify-content: center;
 									image{
 										width: 100%;
-										height: 25rpx;
+										height: 2vh;//25
 									}
 								}
 								._input{
-									margin-left: 20rpx;
+									margin-left: 2vw;//20
 									flex-grow: 1;
 									input{
 										text-align: left;
@@ -339,10 +344,10 @@
 							
 						}
 						.remember_pass{
-							margin-top: 15rpx;
+							margin-top: 0.8vh;//15
 							display: flex;justify-content: flex-end;
 							.checkbox_view{
-								font-size: 18rpx;
+								font-size: 24rpx;//
 								color: #fff;
 								display: flex;
 								justify-content: center;
@@ -350,19 +355,19 @@
 							}
 						}
 						.but{
-							margin-top: 30rpx;
+							margin-top: 4vh;//30
 							.button{
 								// background-image: url("../../static/image/logink.png");
 								color: #fff;
-								width: 280rpx;
-								height: 60rpx;
-								line-height: 60rpx;
-								font-size: 24rpx;
+								width: 35vw;//280
+								height: 4.5vh;///60
+								line-height: 4.5vh;
+								font-size: 28rpx;
 								display: flex;
 								justify-content: center;align-items: center;
-								border-radius: 20rpx;
+								border-radius: 2vw;
 								text{
-									margin: 0 15rpx;
+									margin: 0 1.5vw;
 								}
 							}
 						}
@@ -372,8 +377,9 @@
 						justify-content: center;
 						align-items: center;
 						color: #fff;
-						font-size: 20rpx;
-						margin-top: 185rpx;
+						font-size: 24rpx;
+						margin-top: 14vh;
+						margin-bottom: 1.8vh;
 						.hx_img{
 							// height: 28rpx;
 							// width: 100rpx;

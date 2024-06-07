@@ -1,5 +1,7 @@
 {
-    "globalStyle" : {},
+    "globalStyle" : {
+		"rpxCalcMaxDeviceWidth": 2000
+	},
     "pages" : [
         {
             "path" : "pages/login/login",

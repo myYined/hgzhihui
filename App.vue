@@ -6,7 +6,14 @@
 			// plus.screen.lockOrientation('landscape-primary'); //锁定
 			plus.navigator.hideSystemNavigation()
 			plus.navigator.setFullscreen(true);
-			
+			console.log(uni.getSystemInfoSync(),'系统');
+			const {deviceType}= uni.getSystemInfoSync()
+			uni.setStorage({
+				key:'deviceType',
+				data:{
+					type:deviceType
+				}
+			})
 			// this.$mqtt.launch('wxs://storage.swnpower.com/mqtt')
 		},
 		onShow: function() {
@@ -27,7 +34,7 @@
 	html {
 		width: 100vw;
 		height: 100vh;
-		font-size: 32rpx;
+		font-size: 16px;
 	}
 
 	body {
