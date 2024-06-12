@@ -1,5 +1,6 @@
 <template>
 	<view class="index header">
+<<<<<<< HEAD
 		<view class="nav_view">
 			<view class="nav_page">
 				<view class="nav_left">
@@ -174,4 +175,15 @@ export default{
 			}
 		}
 	}
+=======
+		heder
+	</view>
+</template>
+
+<script setup>
+</script>
+
+<style scoped lang="scss">
+	
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 </style>

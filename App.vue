@@ -6,7 +6,10 @@
 			// plus.screen.lockOrientation('landscape-primary'); //锁定
 			plus.navigator.hideSystemNavigation()
 			plus.navigator.setFullscreen(true);
+<<<<<<< HEAD
 			uni.hideTabBar()
+=======
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			console.log(uni.getSystemInfoSync(),'系统');
 			const {deviceType}= uni.getSystemInfoSync()
 			uni.setStorage({
@@ -17,9 +20,12 @@
 			})
 			// this.$mqtt.launch('wxs://storage.swnpower.com/mqtt')
 		},
+<<<<<<< HEAD
 		onLoad() {
 			uni.hideTabBar()
 		},
+=======
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 		onShow: function() {
 			console.log('App Show');
 		},

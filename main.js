@@ -10,9 +10,13 @@ App.mpType = 'app';
 
 // 全局注册
 import Header from '@/components/Heaher_view/index.vue';
+<<<<<<< HEAD
 import tab from "@/components/custom-tab-bar/index.vue";
 Vue.component('my-header',Header)
 Vue.component('tab',tab)
+=======
+Vue.component('my-header',Header)
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 
 const app = new Vue({
   ...App,

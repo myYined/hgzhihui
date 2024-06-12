@@ -1,11 +1,15 @@
 <template>
 	<view class="index">
+<<<<<<< HEAD
 		<image class="index_img" src="../../static/image/home_img.jpg" mode=""></image>
+=======
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 		<view class="main">
 			<view class="header">
 				<my-header/>
 			</view>
 			<view class="section">
+<<<<<<< HEAD
 				<view class="section_view">
 					<view class="view_content">
 						<view class="view_grid">
@@ -127,4 +131,17 @@
 			}
 		}
 	}
+=======
+				section
+			</view>
+		</view>
+		
+	</view>
+</template>
+
+<script>
+</script>
+
+<style>
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 </style>

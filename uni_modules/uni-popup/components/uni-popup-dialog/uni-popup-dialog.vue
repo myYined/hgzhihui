@@ -10,6 +10,7 @@
 		</view>
 		<view v-else class="uni-dialog-content">
 			<slot>
+<<<<<<< HEAD
 				<input class="uni-dialog-input" :maxlength="maxlength" v-model="val" :type="inputType"
 					:placeholder="placeholderText" :focus="focus">
 			</slot>
@@ -19,6 +20,16 @@
 				<text class="uni-dialog-button-text">{{closeText}}</text>
 			</view>
 			<view class="uni-dialog-button" :class="showClose?'uni-border-left':''" @click="onOk">
+=======
+				<input class="uni-dialog-input" v-model="val" type="text" :placeholder="placeholderText" :focus="focus" >
+			</slot>
+		</view>
+		<view class="uni-dialog-button-group">
+			<view class="uni-dialog-button" @click="closeDialog">
+				<text class="uni-dialog-button-text">{{closeText}}</text>
+			</view>
+			<view class="uni-dialog-button uni-border-left" @click="onOk">
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 				<text class="uni-dialog-button-text uni-button-color">{{okText}}</text>
 			</view>
 		</view>
@@ -29,19 +40,29 @@
 <script>
 	import popup from '../uni-popup/popup.js'
 	import {
+<<<<<<< HEAD
 		initVueI18n
 	} from '@dcloudio/uni-i18n'
 	import messages from '../uni-popup/i18n/index.js'
 	const {
 		t
 	} = initVueI18n(messages)
+=======
+	initVueI18n
+	} from '@dcloudio/uni-i18n'
+	import messages from '../uni-popup/i18n/index.js'
+	const {	t } = initVueI18n(messages)
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 	/**
 	 * PopUp 弹出层-对话框样式
 	 * @description 弹出层-对话框样式
 	 * @tutorial https://ext.dcloud.net.cn/plugin?id=329
 	 * @property {String} value input 模式下的默认值
 	 * @property {String} placeholder input 模式下输入提示
+<<<<<<< HEAD
 	 * @property {Boolean} focus input模式下是否自动聚焦，默认为true
+=======
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 	 * @property {String} type = [success|warning|info|error] 主题样式
 	 *  @value success 成功
 	 * 	@value warning 提示
@@ -50,10 +71,15 @@
 	 * @property {String} mode = [base|input] 模式、
 	 * 	@value base 基础对话框
 	 * 	@value input 可输入对话框
+<<<<<<< HEAD
 	 * @showClose {Boolean} 是否显示关闭按钮
 	 * @property {String} content 对话框内容
 	 * @property {Boolean} beforeClose 是否拦截取消事件
 	 * @property {Number} maxlength 输入
+=======
+	 * @property {String} content 对话框内容
+	 * @property {Boolean} beforeClose 是否拦截取消事件
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 	 * @event {Function} confirm 点击确认按钮触发
 	 * @event {Function} close 点击取消按钮触发
 	 */
@@ -61,6 +87,7 @@
 	export default {
 		name: "uniPopupDialog",
 		mixins: [popup],
+<<<<<<< HEAD
 		emits: ['confirm', 'close', 'update:modelValue', 'input'],
 		props: {
 			inputType: {
@@ -72,10 +99,15 @@
 				default: true
 			},
 			// #ifdef VUE2
+=======
+		emits:['confirm','close'],
+		props: {
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			value: {
 				type: [String, Number],
 				default: ''
 			},
+<<<<<<< HEAD
 			// #endif
 			// #ifdef VUE3
 			modelValue: {
@@ -85,6 +117,8 @@
 			// #endif
 
 
+=======
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			placeholder: {
 				type: [String, Number],
 				default: ''
@@ -108,6 +142,7 @@
 			beforeClose: {
 				type: Boolean,
 				default: false
+<<<<<<< HEAD
 			},
 			cancelText: {
 				type: String,
@@ -124,11 +159,25 @@
 			focus: {
 				type: Boolean,
 				default: true,
+=======
+			},
+			cancelText:{
+				type: String,
+				default: ''
+			},
+			confirmText:{
+				type: String,
+				default: ''
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			}
 		},
 		data() {
 			return {
 				dialogType: 'error',
+<<<<<<< HEAD
+=======
+				focus: false,
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 				val: ""
 			}
 		},
@@ -156,6 +205,7 @@
 				}
 			},
 			value(val) {
+<<<<<<< HEAD
 				if (this.maxlength != -1 && this.mode === 'input') {
 					this.val = val.slice(0, this.maxlength);
 				} else {
@@ -171,6 +221,9 @@
 				// TODO　兼容　vue3
 				this.$emit('update:modelValue', val);
 				// #endif
+=======
+				this.val = val
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			}
 		},
 		created() {
@@ -179,25 +232,44 @@
 			// this.popup.closeMask()
 			if (this.mode === 'input') {
 				this.dialogType = 'info'
+<<<<<<< HEAD
 				this.val = this.value;
 				// #ifdef VUE3
 				this.val = this.modelValue;
 				// #endif
+=======
+				this.val = this.value
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			} else {
 				this.dialogType = this.type
 			}
 		},
+<<<<<<< HEAD
+=======
+		mounted() {
+			this.focus = true
+		},
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 		methods: {
 			/**
 			 * 点击确认按钮
 			 */
 			onOk() {
+<<<<<<< HEAD
 				if (this.mode === 'input') {
 					this.$emit('confirm', this.val)
 				} else {
 					this.$emit('confirm')
 				}
 				if (this.beforeClose) return
+=======
+				if (this.mode === 'input'){
+					this.$emit('confirm', this.val)
+				}else{
+					this.$emit('confirm')
+				}
+				if(this.beforeClose) return
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 				this.popup.close()
 			},
 			/**
@@ -205,17 +277,28 @@
 			 */
 			closeDialog() {
 				this.$emit('close')
+<<<<<<< HEAD
 				if (this.beforeClose) return
 				this.popup.close()
 			},
 			close() {
+=======
+				if(this.beforeClose) return
+				this.popup.close()
+			},
+			close(){
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 				this.popup.close()
 			}
 		}
 	}
 </script>
 
+<<<<<<< HEAD
 <style lang="scss">
+=======
+<style lang="scss" >
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 	.uni-popup-dialog {
 		width: 300px;
 		border-radius: 11px;
@@ -313,4 +396,8 @@
 	.uni-popup__info {
 		color: #909399;
 	}
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c

@@ -1,7 +1,11 @@
 {
 	"id": "uni-popup",
 	"displayName": "uni-popup 弹出层",
+<<<<<<< HEAD
 	"version": "1.9.1",
+=======
+	"version": "1.7.9",
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 	"description": " Popup 组件，提供常用的弹层",
 	"keywords": [
         "uni-ui",
@@ -17,8 +21,17 @@
 	"directories": {
 		"example": "../../temps/example_temps"
 	},
+<<<<<<< HEAD
     "dcloudext": {
         "sale": {
+=======
+	"dcloudext": {
+		"category": [
+			"前端组件",
+			"通用组件"
+		],
+		"sale": {
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			"regular": {
 				"price": "0.00"
 			},
@@ -34,8 +47,12 @@
 			"data": "无",
 			"permissions": "无"
 		},
+<<<<<<< HEAD
         "npmurl": "https://www.npmjs.com/package/@dcloudio/uni-ui",
         "type": "component-vue"
+=======
+		"npmurl": "https://www.npmjs.com/package/@dcloudio/uni-ui"
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 	},
 	"uni_modules": {
 		"dependencies": [
@@ -46,8 +63,12 @@
 		"platforms": {
 			"cloud": {
 				"tcb": "y",
+<<<<<<< HEAD
                 "aliyun": "y",
                 "alipay": "n"
+=======
+				"aliyun": "y"
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 			},
 			"client": {
 				"App": {

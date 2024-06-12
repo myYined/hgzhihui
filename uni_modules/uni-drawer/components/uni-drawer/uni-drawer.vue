@@ -131,7 +131,11 @@
 		top: 0;
 		width: $drawer-width;
 		bottom: 0;
+<<<<<<< HEAD
 		background-color: $uni-bg-color;
+=======
+		background-color: rgba(0,0,0,.2);
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 		transition: transform 0.3s ease;
 	}
 

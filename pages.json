@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
     "globalStyle" : {
         "rpxCalcMaxDeviceWidth" : 2000
     },
+=======
+    "globalStyle" : {
+		"rpxCalcMaxDeviceWidth": 2000
+	},
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
     "pages" : [
         {
             "path" : "pages/login/login",
@@ -29,6 +35,7 @@
         },
         {
             "path" : "pages/home/home",
+<<<<<<< HEAD
             "style" : {
                 "navigationStyle" : "custom"
             }
@@ -85,4 +92,11 @@
 			"visible":"false"
 		}]
 	}
+=======
+            "style" : {
+				"navigationStyle" : "custom"
+			}
+        }
+    ]
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 }

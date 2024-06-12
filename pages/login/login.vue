@@ -278,7 +278,11 @@
 						image{
 							// margin-top: 25rpx;
 							width: 4.5vw;
+<<<<<<< HEAD
 							height: 2.5vh;
+=======
+							height: 3vh;
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 							// height:$imageSize ;
 							// width: $imageSize;
 						}

@@ -14,7 +14,11 @@
         "nvueStyleCompiler" : "uni-app",
         "compilerVersion" : 3,
         "splashscreen" : {
+<<<<<<< HEAD
             "alwaysShowBeforeRender" : true,
+=======
+            "alwaysShowBeforeRender" : false,
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
             "waiting" : true,
             "autoclose" : true,
             "delay" : 0
@@ -117,6 +121,7 @@
     },
     "uniStatistics" : {
         "enable" : false
+<<<<<<< HEAD
     },
     "h5" : {
         "devServer" : {
@@ -134,4 +139,22 @@
             }
         }
     }
+=======
+    },
+	"h5" : {
+		"devServer" : {
+			 "port" : 8080, //浏览器运行端口
+			  "disableHostCheck" : true, //设置跳过host检查
+			  "proxy" : {
+				  "/api" : {
+					  "target" : "http://223.247.152.111:3367", //目标接口域名
+					   "changeOrigin" : true,  //是否跨域
+					   "secure" : false,  // 设置支持https协议的代理
+						"pathRewrite":{"^/api":""}
+				 }
+			}
+		}
+	}
+
+>>>>>>> 1c4ff1f79fae2a8429b11e5ae78a9fa14db2439c
 }
