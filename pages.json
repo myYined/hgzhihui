@@ -1,0 +1,88 @@
+{
+    "globalStyle" : {
+        "rpxCalcMaxDeviceWidth" : 2000
+    },
+    "pages" : [
+        {
+            "path" : "pages/login/login",
+            "style" : {
+                "navigationStyle" : "custom"
+            }
+        },
+        {
+            "path" : "pages/settings/settings",
+            "style" : {
+                "navigationStyle" : "custom"
+            }
+        },
+        {
+            "path" : "pages/infomate/infomate",
+            "style" : {
+                "navigationStyle" : "custom"
+            }
+        },
+        {
+            "path" : "pages/maininfo/maininfo",
+            "style" : {
+                "navigationStyle" : "custom"
+            }
+        },
+        {
+            "path" : "pages/home/home",
+            "style" : {
+                "navigationStyle" : "custom"
+            }
+        },
+        {
+            "path" : "components/Heaher_view/index",
+            "style" : {}
+        },
+		{
+			"path": "pages/lighting/index",
+			"style" : {
+			    "navigationStyle" : "custom"
+			}
+		},
+		{
+			"path": "pages/classromm/index",
+			"style" : {
+			    "navigationStyle" : "custom"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style" : {
+			    "navigationStyle" : "custom"
+			}
+		}
+    ],
+	"tabBar": {
+		"custom":true,
+		"selectedColor": "#FCA000",
+		"height": "0px",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"iconPath": "static/image/schoolExtinction.png",
+			"selectedIconPath": "static/image/schoolBright.png",
+			"text": "学校",
+			"visible":"false"
+		},{
+			"pagePath": "pages/lighting/index",
+			"iconPath": "static/image/lightOn.png",
+			"selectedIconPath": "static/image/back.png",
+			"text": "灯光",
+			"visible":"false"
+		},{
+			"pagePath": "pages/classromm/index",
+			"iconPath": "static/image/classroomOn.png",
+			"text": "教室",
+			"visible":"false"
+		},{
+			"pagePath": "pages/my/index",
+			"iconPath": "static/image/myDown.png",
+			"selectedIconPath": "static/image/myOn.png",
+			"text": "我的",
+			"visible":"false"
+		}]
+	}
+}
